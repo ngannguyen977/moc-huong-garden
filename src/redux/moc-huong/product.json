@@ -1,0 +1,56 @@
+[
+        {
+            "name":"Bạc Hà Âu (Euro Mint)",
+            "description":"Là giống bạc hà ưu việt nhất vì lớn nhanh, ít sâu bệnh so với những dòng bạc hà khác. Được sử dụng để chiết xuất tinh dầu, pha trà, làm sữa rửa mặt, xay sinh tố, làm gia vị trong các món ăn và thảo dược chữa bệnh.",
+            "price":"25,000",
+            "status":"Còn hàng",
+            "feature":"Ưa nắng nhẹ",
+            "size":"12cm",
+            "imageUrl":"https://c1.staticflickr.com/5/4385/36116500974_cbb4c05292_z.jpg"
+        },
+        {
+            "name":"Bạc Hà Chanh (Lemon Balm)",
+            "description":"Là một giống bạc hà khá đặc biệt, tuy tên là bạc hà chanh nhưng lại thơm đậm đà mùi xả át cả hương chanh. Người âu châu rất ưa dùng để pha trà hay làm thuốc, nó được liệt kê vào những loại thảo dược không thể thiếu trong vườn của họ.",
+            "price":"25,000",
+            "status":"Còn hàng",
+            "feature":"Ưa nắng nhẹ",
+            "size":"15cm",
+            "imageUrl":"https://c1.staticflickr.com/5/4420/36554126480_b08eeff890_z.jpg"
+        },
+        {
+            "name":"Bạc Hà Nhật",
+            "description":"Thuộc nhóm bạc hà chứa nhiều tinh dầu nhất nên bạn có thể dùng để chiết xuất tinh dầu. Lá có màu xanh nhạt, có nhiều lông, khi sờ ta có cảm giác lá rất mỏng chứ không được dày dặn.",
+            "price":"25,000",
+            "status":"Còn hàng",
+            "feature":"Ưa nắng nhẹ",
+            "size":"20cm",
+            "imageUrl":"https://farm8.staticflickr.com/7827/47378284562_30d09ea6be_c.jpg"
+        },
+        {
+            "name":"Bạc Hà Âu (Euro Mint)",
+            "description":"Là giống bạc hà ưu việt nhất vì lớn nhanh, ít sâu bệnh so với những dòng bạc hà khác. Được sử dụng để chiết xuất tinh dầu, pha trà, làm sữa rửa mặt, xay sinh tố, làm gia vị trong các món ăn và thảo dược chữa bệnh.",
+            "price":"25,000",
+            "status":"Còn hàng",
+            "feature":"Ưa nắng nhẹ",
+            "size":"12cm",
+            "imageUrl":"https://c1.staticflickr.com/5/4416/36115841214_f0522fd570_z.jpg"
+        },
+        {
+            "name":"Bạc Hà Chanh (Lemon Balm)",
+            "description":"Là một giống bạc hà khá đặc biệt, tuy tên là bạc hà chanh nhưng lại thơm đậm đà mùi xả át cả hương chanh. Người âu châu rất ưa dùng để pha trà hay làm thuốc, nó được liệt kê vào những loại thảo dược không thể thiếu trong vườn của họ.",
+            "price":"25,000",
+            "status":"Còn hàng",
+            "feature":"Ưa nắng nhẹ",
+            "size":"15cm",
+            "imageUrl":"https://c1.staticflickr.com/5/4416/36115841214_f0522fd570_z.jpg"
+        },
+        {
+            "name":"Bạc Hà Nhật",
+            "description":"Thuộc nhóm bạc hà chứa nhiều tinh dầu nhất nên bạn có thể dùng để chiết xuất tinh dầu. Lá có màu xanh nhạt, có nhiều lông, khi sờ ta có cảm giác lá rất mỏng chứ không được dày dặn.",
+            "price":"25,000",
+            "status":"Còn hàng",
+            "feature":"Ưa nắng nhẹ",
+            "size":"20cm",
+            "imageUrl":"https://c1.staticflickr.com/5/4416/36115841214_f0522fd570_z.jpg"
+        }
+    ]

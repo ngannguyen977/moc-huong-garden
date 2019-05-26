@@ -1,0 +1,58 @@
+import React from 'react'
+import { connect } from 'react-redux'
+import './style.scss';
+import { getData, getProduct } from '../../redux/moc-huong/reducer'
+import Product from './product'
+import Footer from './footer'
+import Menu from './menu'
+
+class MocHuong extends React.Component {
+    constructor() {
+        super()
+        this.state = {
+
+        }
+    }
+    componentDidMount() {
+        console.log('PROPS', this.props)
+        this.props.getDataFromStore()
+        this.props.getProductFromStore()
+
+    }
+    render() {
+        console.log('index dTA', this.props.productData)
+        return (
+            <div id="page-top">
+                <Menu data={this.props.displayData}/>
+                <Product productDataCon={this.props.productData}/>
+                <Footer />
+            </div>
+        )
+    }
+}
+const mapStateToProps = (state) => {
+    console.log('STATE', state)
+
+    return {
+        // todo: state.todos[ownProps.id]
+        displayData: state.mocHuong,
+        productData: state.mocHuong.dataProducts
+
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        getDataFromStore: () => dispatch(getData()),
+        getProductFromStore: () => dispatch(getProduct())
+        // dispatching plain actions
+        // addTodo: (value)=>dispatch(addTodo(value)),
+        //   changeSlogan: (diachi) =>dispatch(nhapDiaChi(diachi))
+
+    }
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(MocHuong)
