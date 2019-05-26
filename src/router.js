@@ -257,12 +257,17 @@ const routes = [
     component: loadable(() => import('pages/antd')),
     exact: true,
   },
-    // moc-huong
-    {
-      path: '/moc-huong',
-      component: loadable(() => import('pages/moc-huong')),
-      exact: true,
-    },
+  // moc-huong
+  {
+    path: '/moc-huong',
+    component: loadable(() => import('pages/moc-huong')),
+    exact: true,
+  },
+  {
+    path: '/product-detail',
+    component: loadable(() => import('pages/product-detail')),
+    exact: true,
+  },
 ]
 
 class Router extends React.Component {
