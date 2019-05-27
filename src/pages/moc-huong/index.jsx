@@ -5,7 +5,7 @@ import { getData, getProduct } from '../../redux/moc-huong/reducer'
 import Product from './product'
 import Footer from './footer'
 import Menu from './menu'
-
+import Gallery from './gallery'
 class MocHuong extends React.Component {
     constructor() {
         super()
@@ -24,7 +24,8 @@ class MocHuong extends React.Component {
         return (
             <div id="page-top">
                 <Menu data={this.props.displayData}/>
-                <Product productDataCon={this.props.productData}/>
+                <Gallery/>
+                <div className="container"><Product productDataCon={this.props.productData}/></div>
                 <Footer />
             </div>
         )
@@ -35,7 +36,7 @@ const mapStateToProps = (state) => {
 
     return {
         // todo: state.todos[ownProps.id]
-        displayData: state.mocHuong,
+        displayData: state.mocHuong.dulieu,
         productData: state.mocHuong.dataProducts
 
     }
