@@ -2,7 +2,8 @@ import React from 'react'
 import './mochuong.scss'
 
 class Product extends React.Component {
-
+//lên store lấy dữ liệu về
+//mà du liệu phải được map từ state sang props ( phần này đã làm bên index.jsx) 
 	render() {
 		let data = this.props.productDataCon || []
 		console.log('dulieu', data)
