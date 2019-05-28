@@ -23,7 +23,7 @@ class MocHuong extends React.Component {
         console.log('index dTA', this.props.productData)
         return (
             <div id="page-top">
-                
+
                 <Menu data={this.props.displayData}/>
                 <div className="container">
                     <div className="row">
@@ -35,9 +35,9 @@ class MocHuong extends React.Component {
                     </div>
                 </div>
                 <Gallery/>
-                <div className="container">
-                    <Product productDataCon={this.props.productData}/>
-                </div>
+                <div className="container"><Product
+                productDataCon={this.props.productData}
+                getProductFromStore={this.props.getProductFromStore}/></div>
                 <Footer />
             </div>
         )
@@ -51,7 +51,7 @@ const mapStateToProps = (state) => {
         // todo: state.todos[ownProps.id]
         // lấy dứ liệu từ trong store ra ( store đã được reducer xử lý)
         displayData: state.mocHuong.dulieu,
-        productData: state.mocHuong.dataProducts
+        productData: state.mocHuong.dataProducts || {} // thêm cái này cho nó khỏi bị lỗi undefined
 
     }
 }
@@ -59,7 +59,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = dispatch => {
     return {
         getDataFromStore: () => dispatch(getData()),
-        getProductFromStore: () => dispatch(getProduct())
+        getProductFromStore: (pageIndex,pageSize) => dispatch(getProduct(pageIndex,pageSize)) // them param cho no'
         // dispatching plain actions
         // addTodo: (value)=>dispatch(addTodo(value)),
         //   changeSlogan: (diachi) =>dispatch(nhapDiaChi(diachi))

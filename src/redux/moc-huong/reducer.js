@@ -1,5 +1,7 @@
 import mockData from './mock-data.json'
 import mockProduct from './product.json'
+// giả lập API vì chưa có API :D
+import mockApi from '../mock-api/mock-product-api'
 
 //______________________ACTION NAME____________________________
 const actions = {
@@ -16,13 +18,27 @@ export const getPageDetail = () => {
         data: mockData
     }
 }
-export const getProduct = () => {
+// hàm get list product cũ, a bôi đen nó đi để e so sánh nhé, hàm mới support phân trang chỉ cần thêm 2 tham số pageIndex(vị trí page đang đứng) và pageSize (số lượng sản phẩm hiển thị)
+// export const getProduct = () => {
+//     return {
+//         type: actions.GET_PRODUCT,
+//         dataOfProduct: mockProduct
+//     }
+// }
+// ham moi ho tro phân trang, pageIndex mặc định là 1, kích thước page (pageSize) mặc định là 10
+export const getProduct = (pageIndex=1,pageSize=10) => {
     return {
         type: actions.GET_PRODUCT,
-        dataOfProduct: mockProduct
+        dataOfProduct: mockApi.getProducts(pageIndex,pageSize)
+        // dữ liệu data trả về từ api có chút thay đổi so với file product.json, px vào thư mục mock-api/mock-product-api.json để coi nhé, nó dạng
+        /* {
+            data:[], // list products
+            total: 100, // số lượng tất cả product mình có
+            pageIndex:1 // page index
+            }
+        */
     }
 }
-
 export const getData = () => {
     return {
         type: 'GET_DATA',
@@ -36,7 +52,7 @@ const initialState = {
         products: []
     }
     //______________________REDUCER____________________________
-    // 
+    //
 export default function reducer(state = initialState, action) {
     switch (action.type) {
         case actions.GET_DETAIL:
