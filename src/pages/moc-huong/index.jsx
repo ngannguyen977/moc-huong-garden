@@ -25,7 +25,9 @@ class MocHuong extends React.Component {
             <div id="page-top">
                 <Menu data={this.props.displayData}/>
                 <Gallery/>
-                <div className="container"><Product productDataCon={this.props.productData}/></div>
+                <div className="container"><Product
+                productDataCon={this.props.productData}
+                getProductFromStore={this.props.getProductFromStore}/></div>
                 <Footer />
             </div>
         )
@@ -37,7 +39,7 @@ const mapStateToProps = (state) => {
     return {
         // todo: state.todos[ownProps.id]
         displayData: state.mocHuong.dulieu,
-        productData: state.mocHuong.dataProducts
+        productData: state.mocHuong.dataProducts || {} // thêm cái này cho nó khỏi bị lỗi undefined
 
     }
 }
@@ -45,7 +47,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = dispatch => {
     return {
         getDataFromStore: () => dispatch(getData()),
-        getProductFromStore: () => dispatch(getProduct())
+        getProductFromStore: (pageIndex,pageSize) => dispatch(getProduct(pageIndex,pageSize)) // them param cho no'
         // dispatching plain actions
         // addTodo: (value)=>dispatch(addTodo(value)),
         //   changeSlogan: (diachi) =>dispatch(nhapDiaChi(diachi))
