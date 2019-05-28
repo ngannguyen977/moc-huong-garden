@@ -2,7 +2,8 @@ import React from 'react'
 import './mochuong.scss'
 
 class Product extends React.Component {
-
+//lên store lấy dữ liệu về
+//mà du liệu phải được map từ state sang props ( phần này đã làm bên index.jsx) 
 	render() {
 		const PAGESIZE = 10 // set số lượng item hiển thị mặc định là 10
 		const { data, total, pageIndex } = this.props.productDataCon // kiểu khai báo biến mới trong ES6
