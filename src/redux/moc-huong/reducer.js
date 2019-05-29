@@ -26,7 +26,7 @@ export const getPageDetail = () => {
 //     }
 // }
 // ham moi ho tro phân trang, pageIndex mặc định là 1, kích thước page (pageSize) mặc định là 10
-export const getProduct = (pageIndex=1,pageSize=10) => {
+export const getProduct = (pageIndex=1,pageSize=9) => {
     return {
         type: actions.GET_PRODUCT,
         dataOfProduct: mockApi.getProducts(pageIndex,pageSize)
